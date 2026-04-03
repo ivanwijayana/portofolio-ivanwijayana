@@ -51,56 +51,161 @@
                 </div>
             </div>
 
-            <section class="mb-24">
-                <div class="flex items-center gap-4 mb-10">
-                    <h2 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400">01 / Web Development</h2>
-                    <div class="h-[1px] flex-grow bg-slate-100"></div>
+           <section class="mb-24">
+    <div class="flex items-center gap-4 mb-10">
+        <h2 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400">01 / Web Development</h2>
+        <div class="h-[1px] flex-grow bg-slate-100"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group cursor-pointer" onclick="window.open('https://calc-co.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-[#0A192F] h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">CALC<span class="text-blue-500">.CO</span></span>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="group cursor-pointer">
-                        <div class="relative overflow-hidden rounded-[2rem] bg-[#0A192F] h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
-                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">CALC<span class="text-blue-500">.CO</span></span>
-                            </div>
-                            <div class="absolute inset-0 bg-blue-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
-                                <h3 class="text-2xl font-black uppercase mb-3 leading-none">Age Insight<br>Tracker</h3>
-                                <p class="text-[11px] opacity-90 leading-relaxed mb-6">Menghitung presisi umur user hingga hitungan detik, serta visualisasi data waktu hidup yang telah dijalani secara mendalam.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Vanilla JS</span>
-                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Moment.js</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-2">
-                            <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Calc.Co App</h4>
-                            <p class="text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Tech Stack: JS, Tailwind, Vercel</p>
-                        </div>
-                    </div>
-
-                    <div class="group cursor-pointer">
-                        <div class="relative overflow-hidden rounded-[2rem] bg-orange-500 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
-                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">FOOD<span class="text-orange-100">.REC</span></span>
-                            </div>
-                            <div class="absolute inset-0 bg-orange-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
-                                <h3 class="text-2xl font-black uppercase mb-3 leading-none text-white">Smart Recipe<br>Curator</h3>
-                                <p class="text-[11px] opacity-90 leading-relaxed mb-6">Integrasi API untuk menemukan resep masakan berdasarkan sisa bahan makanan yang tersedia.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">React JS</span>
-                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">REST API</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="px-2">
-                            <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Food Recommendation</h4>
-                            <p class="text-[9px] font-bold text-orange-600 uppercase tracking-widest mt-1">Tech Stack: React, API, CSS</p>
-                        </div>
+                <div class="absolute inset-0 bg-blue-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Age Insight<br>Tracker</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Menghitung presisi umur user hingga hitungan detik, serta visualisasi data waktu hidup.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Vanilla JS</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Moment.js</span>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Calc.Co App</h4>
+                <p class="text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Tech Stack: JS, Tailwind, Vercel</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('https://food-recomendation-app.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-orange-500 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">FOOD<span class="text-orange-100">.REC</span></span>
+                </div>
+                <div class="absolute inset-0 bg-orange-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Smart Recipe<br>Curator</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Integrasi API untuk menemukan resep masakan berdasarkan sisa bahan makanan.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">React JS</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">REST API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Food Recommendation</h4>
+                <p class="text-[9px] font-bold text-orange-600 uppercase tracking-widest mt-1">Tech Stack: React, API, CSS</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('http://retro-game-arcade.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-indigo-700 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pixel-weave.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110 italic">RETRO<span class="text-indigo-300">.GAME</span></span>
+                </div>
+                <div class="absolute inset-0 bg-indigo-800/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Arcade<br>Nostalgia</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Koleksi game klasik 8-bit yang dibangun dengan logika JavaScript murni untuk pengalaman arcade.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Javascript</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Canvas API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Retro Arcade Hub</h4>
+                <p class="text-[9px] font-bold text-indigo-600 uppercase tracking-widest mt-1">Tech Stack: HTML5, JS, CSS</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('http://react-laundry-flame.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-cyan-500 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/bubbles.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110 italic">CLEAN<span class="text-cyan-100">.LY</span></span>
+                </div>
+                <div class="absolute inset-0 bg-cyan-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Laundry<br>Management</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Sistem pelacakan status laundry secara real-time dengan dashboard admin yang komprehensif.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">React</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Context API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Cleanly System</h4>
+                <p class="text-[9px] font-bold text-cyan-600 uppercase tracking-widest mt-1">Tech Stack: React, Tailwind</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('http://pomodoro-eight.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-rose-500 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pinstripe.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110 italic">POMO<span class="text-rose-200">.EIGHT</span></span>
+                </div>
+                <div class="absolute inset-0 bg-rose-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Deep Focus<br>Timer</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Alat produktivitas minimalis untuk teknik Pomodoro guna memaksimalkan fokus kerja.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Productivity</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Pomodoro App</h4>
+                <p class="text-[9px] font-bold text-rose-600 uppercase tracking-widest mt-1">Tech Stack: React, State MGMT</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('http://catat-uang-two.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-emerald-600 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/money.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110 italic uppercase">Catat<span class="text-emerald-100">.Uang</span></span>
+                </div>
+                <div class="absolute inset-0 bg-emerald-700/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Financial<br>Tracker</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">Manajemen keuangan harian dengan visualisasi saldo, pemasukan, dan pengeluaran cerdas.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Fintech</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Local Storage</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Catatuang App</h4>
+                <p class="text-[9px] font-bold text-emerald-600 uppercase tracking-widest mt-1">Tech Stack: React, CSS Grid</p>
+            </div>
+        </div>
+
+        <div class="group cursor-pointer" onclick="window.open('http://summit-seeker-five.vercel.app/', '_blank')">
+            <div class="relative overflow-hidden rounded-[2rem] bg-[#FF6B35] h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/topography.png')]"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110 italic font-heading uppercase">Summit<span class="text-orange-900/30">Seeker</span></span>
+                </div>
+                <div class="absolute inset-0 bg-orange-700/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                    <h3 class="text-2xl font-black uppercase mb-3 leading-none">Gear Rental<br>Hub</h3>
+                    <p class="text-[11px] opacity-90 leading-relaxed mb-6">E-commerce khusus alat outdoor dengan sistem pemesanan dan monitoring stok terintegrasi.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">E-Commerce</span>
+                        <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Alpine JS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">SummitSeeker Hub</h4>
+                <p class="text-[9px] font-bold text-orange-600 uppercase tracking-widest mt-1">Tech Stack: Tailwind, Alpine, Vercel</p>
+            </div>
+        </div>
+    </div>
+</section>
 
             <section>
                 <div class="flex items-center gap-4 mb-10">
