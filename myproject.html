@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ivan Wijayana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
+        .hero-title {
+            font-family: 'Inter', sans-serif;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+        }
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px #0A192F;
+        }
+        .card-shadow {
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-600 selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-100">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="/" class="text-[#0A192F] text-xl font-black tracking-tighter uppercase">Ivan<span class="text-blue-600">.W</span></a>
+            <a href="/" class="group flex items-center gap-2 text-[#0A192F] text-[10px] font-black uppercase tracking-widest transition-all">
+                <i data-lucide="arrow-left" class="w-3 h-3 transition-transform group-hover:-translate-x-1"></i>
+                <span class="border-b-2 border-[#0A192F]/10 group-hover:border-blue-600 pb-0.5">Back to Home</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            
+            <div class="mb-24">
+                <h1 class="hero-title text-[15vw] md:text-[12vw] uppercase font-black text-[#0A192F]">
+                    Selected<br>
+                    <span class="text-blue-600">Projects</span><br>
+                    <span class="text-outline italic">Digital Exp.</span>
+                </h1>
+                <div class="mt-8">
+                    <p class="max-w-md text-slate-500 font-medium leading-relaxed">
+                        Kurasi karya terbaik dalam pengembangan digital dan eksplorasi kecerdasan buatan.
+                    </p>
+                </div>
+            </div>
+
+            <section class="mb-24">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400">01 / Web Development</h2>
+                    <div class="h-[1px] flex-grow bg-slate-100"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-[2rem] bg-[#0A192F] h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">CALC<span class="text-blue-500">.CO</span></span>
+                            </div>
+                            <div class="absolute inset-0 bg-blue-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                                <h3 class="text-2xl font-black uppercase mb-3 leading-none">Age Insight<br>Tracker</h3>
+                                <p class="text-[11px] opacity-90 leading-relaxed mb-6">Menghitung presisi umur user hingga hitungan detik, serta visualisasi data waktu hidup yang telah dijalani secara mendalam.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Vanilla JS</span>
+                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">Moment.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Calc.Co App</h4>
+                            <p class="text-[9px] font-bold text-blue-600 uppercase tracking-widest mt-1">Tech Stack: JS, Tailwind, Vercel</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-[2rem] bg-orange-500 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white font-black text-4xl tracking-tighter transition-transform duration-700 group-hover:scale-110">FOOD<span class="text-orange-100">.REC</span></span>
+                            </div>
+                            <div class="absolute inset-0 bg-orange-600/95 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                                <h3 class="text-2xl font-black uppercase mb-3 leading-none text-white">Smart Recipe<br>Curator</h3>
+                                <p class="text-[11px] opacity-90 leading-relaxed mb-6">Integrasi API untuk menemukan resep masakan berdasarkan sisa bahan makanan yang tersedia.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">React JS</span>
+                                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">REST API</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Food Recommendation</h4>
+                            <p class="text-[9px] font-bold text-orange-600 uppercase tracking-widest mt-1">Tech Stack: React, API, CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xs font-black uppercase tracking-[0.4em] text-slate-400">02 / AI Content</h2>
+                    <div class="h-[1px] flex-grow bg-slate-100"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-[2rem] bg-purple-600 h-[380px] mb-6 card-shadow transition-all duration-500 group-hover:shadow-xl">
+                            <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/microfab.png')]"></div>
+                            <div class="absolute inset-0 flex items-center justify-center text-center">
+                                <span class="text-white font-black text-4xl tracking-tighter">AI<span class="text-purple-300">.GEN</span></span>
+                            </div>
+                            <div class="absolute inset-0 bg-purple-800/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center px-8 text-white">
+                                <h3 class="text-2xl font-black uppercase mb-3">Cinematic Art</h3>
+                                <p class="text-[11px] opacity-90 leading-relaxed mb-6">Visual storytelling menggunakan prompt engineering tingkat lanjut.</p>
+                                <div class="flex flex-wrap gap-2 text-[8px] font-black uppercase tracking-tighter">
+                                    <span class="border border-white/40 px-2 py-1 rounded">Midjourney</span>
+                                    <span class="border border-white/40 px-2 py-1 rounded">DALL-E 3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-black text-lg text-[#0A192F] uppercase tracking-tight">Visual Storytelling</h4>
+                            <p class="text-[9px] font-bold text-purple-600 uppercase tracking-[0.2em] mt-1">Prompt Engineering / AI Design</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="py-20 bg-[#0A192F] text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <h2 class="text-2xl font-black tracking-tighter uppercase">Let's build something <span class="text-blue-500 italic">bold</span>.</h2>
+            <div class="flex gap-6 text-[10px] font-black uppercase tracking-[0.3em]">
+                <a href="#" class="hover:text-blue-400 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

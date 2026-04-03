@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ivan Wijayana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2563eb; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth; 
+        }
+        /* Class heading-font sekarang menggunakan Plus Jakarta Sans Bold seperti Home lo */
+        .heading-font { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            font-weight: 900; 
+            letter-spacing: -0.05em; 
+        }
+        .text-outline { -webkit-text-stroke: 1px #cbd5e1; color: transparent; }
+        .card-hover:hover { transform: translateY(-5px); border-color: var(--primary); }
+    </style>
+</head>
+<body class="bg-white text-[#0A192F] selection:bg-blue-600 selection:text-white">
+
+    <header class="fixed w-full top-0 z-[100] bg-white/80 backdrop-blur-md border-b border-slate-50">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="/" class="heading-font text-2xl font-black tracking-tighter uppercase">IVAN<span class="text-blue-600">.W</span></a>
+            <nav class="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="/" class="hover:text-blue-600 transition-all">Home</a>
+                <a href="/myproject.html" class="hover:text-blue-600 transition-all">Projects</a>
+                <a href="/mycareer.html" class="hover:text-blue-600 transition-all">Journey</a>
+                <a href="/about.html" class="text-blue-600 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-blue-600">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <section class="container mx-auto px-6 mb-32">
+            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-extrabold uppercase tracking-widest mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                        </span>
+                        Ready to Innovate & Create
+                    </div>
+                    <h1 class="heading-font text-6xl md:text-8xl leading-[0.9] mb-8 uppercase">
+                        The <span class="text-blue-600 italic">Dual</span> <br> Life.
+                    </h1>
+                    <p class="text-xl md:text-2xl font-medium text-slate-600 max-w-2xl leading-relaxed mb-10">
+                        Mahasiswa IT di siang hari, Developer & Production Staff di malam hari. Sejak 2020, gue nggak cuma belajar teori, tapi langsung <span class="text-[#0A192F] font-extrabold underline decoration-blue-600 decoration-4 underline-offset-4">eksekusi di industri.</span>
+                    </p>
+                    <div class="flex gap-4">
+                         <div class="text-center px-8 py-5 border-2 border-slate-50 rounded-2xl bg-slate-50/50">
+                            <span class="block text-4xl font-black text-[#0A192F]">4+</span>
+                            <span class="text-[9px] text-slate-400 font-black uppercase tracking-widest">Years Exp</span>
+                         </div>
+                         <div class="text-center px-8 py-5 border-2 border-slate-50 rounded-2xl bg-slate-50/50">
+                            <span class="block text-4xl font-black text-[#0A192F]">CS</span>
+                            <span class="text-[9px] text-slate-400 font-black uppercase tracking-widest">Undergraduate</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/5] bg-slate-100 rounded-[2.5rem] overflow-hidden group border-8 border-white shadow-2xl relative z-10">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-300 font-black uppercase tracking-tighter text-4xl">
+                            <img src="ivan.JPG" alt="Foto Ivan Wijayana" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-blue-600 blur-[80px] opacity-20 -z-0"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#0A192F] py-16 overflow-hidden mb-32 transform -rotate-1 translate-y-6">
+            <div class="whitespace-nowrap flex gap-10 animate-pulse">
+                <span class="text-4xl md:text-5xl font-black text-white/10 uppercase tracking-tighter">IT STUDENT • PRODUCTION STAFF • FULL STACK DEVELOPER • LIVE HOST • </span>
+                <span class="text-4xl md:text-5xl font-black text-white/10 uppercase tracking-tighter">IT STUDENT • PRODUCTION STAFF • FULL STACK DEVELOPER • LIVE HOST • </span>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 mb-40 pt-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <h2 class="heading-font text-5xl uppercase leading-none">Stack & <br><span class="text-blue-600">Capabilities.</span></h2>
+                <p class="text-slate-500 font-semibold max-w-xs text-sm leading-relaxed">Gue menggabungkan logika pemrograman dengan efisiensi manajemen industri produksi.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 border-2 border-slate-50 rounded-[3rem] card-hover transition-all bg-white shadow-sm">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Core Dev</h3>
+                    <ul class="space-y-3 text-[11px] font-black text-slate-400 uppercase tracking-widest">
+                        <li class="flex items-center gap-2 text-blue-600 font-black">Laravel 10 / PHP</li>
+                        <li>Tailwind / React</li>
+                        <li>MySQL / Git</li>
+                    </ul>
+                </div>
+                <div class="p-10 border-2 border-slate-50 rounded-[3rem] card-hover transition-all bg-white shadow-sm">
+                    <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-[#0A192F] mb-8">
+                        <i data-lucide="factory"></i>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight text-[#0A192F]">Industrial</h3>
+                    <ul class="space-y-3 text-[11px] font-black text-slate-400 uppercase tracking-widest">
+                        <li class="text-[#0A192F]">Quality Control</li>
+                        <li>Printing Tech</li>
+                        <li>Logistics Ops</li>
+                    </ul>
+                </div>
+                <div class="p-10 bg-[#0A192F] rounded-[3rem] text-white card-hover transition-all shadow-xl shadow-blue-900/10">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8">
+                        <i data-lucide="mic-2"></i>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Publicity</h3>
+                    <ul class="space-y-3 text-[11px] font-black text-white/40 uppercase tracking-widest">
+                        <li class="text-blue-400">Live Streaming</li>
+                        <li>Sales Strategy</li>
+                        <li>Engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 mb-40">
+    <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+                <h2 class="text-7xl font-black uppercase tracking-tighter text-[#0A192F] leading-[0.8]">
+                    Verified<br><span class="text-blue-600">Credentials.</span>
+                </h2>
+            </div>
+            <div class="md:text-right">
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-2">Total Certification</p>
+                <span class="text-4xl font-black text-[#0A192F]">07</span>
+            </div>
+        </div>
+
+        <div class="grid gap-6">
+            
+            <div class="group relative flex flex-col md:flex-row md:items-center justify-between p-10 bg-white border-2 border-slate-50 rounded-[3rem] hover:border-blue-600 transition-all duration-500">
+                <div class="flex items-center gap-8">
+                    <span class="hidden md:block text-slate-100 font-black text-5xl group-hover:text-blue-50 transition-colors">01</span>
+                    <div>
+                        <h4 class="font-black text-[#0A192F] uppercase text-xl tracking-tight">IoT Fundamentals: Connecting Things</h4>
+                        <p class="text-[11px] font-bold text-blue-600 uppercase tracking-[0.3em] mt-1">Cisco Networking Academy • Issued Jan 2024</p>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-4">
+                    <span class="px-4 py-2 bg-slate-50 rounded-full text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-all">Verified Kredensial</span>
+                    <div class="w-12 h-12 rounded-full bg-[#0A192F] text-white flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative flex flex-col md:flex-row md:items-center justify-between p-10 bg-white border-2 border-slate-50 rounded-[3rem] hover:border-blue-600 transition-all duration-500">
+                <div class="flex items-center gap-8">
+                    <span class="hidden md:block text-slate-100 font-black text-5xl group-hover:text-blue-50 transition-colors">02</span>
+                    <div>
+                        <h4 class="font-black text-[#0A192F] uppercase text-xl tracking-tight">CCNA: Introduction to Networks</h4>
+                        <p class="text-[11px] font-bold text-blue-600 uppercase tracking-[0.3em] mt-1">Cisco Systems • Issued Dec 2022</p>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-4">
+                    <span class="px-4 py-2 bg-slate-50 rounded-full text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-all">Networking Stack</span>
+                    <div class="w-12 h-12 rounded-full bg-[#0A192F] text-white flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative flex flex-col md:flex-row md:items-center justify-between p-10 bg-white border-2 border-slate-50 rounded-[3rem] hover:border-blue-600 transition-all duration-500">
+                <div class="flex items-center gap-8">
+                    <span class="hidden md:block text-slate-100 font-black text-5xl group-hover:text-blue-50 transition-colors">03</span>
+                    <div>
+                        <h4 class="font-black text-[#0A192F] uppercase text-xl tracking-tight">Oracle Database Design</h4>
+                        <p class="text-[11px] font-bold text-blue-600 uppercase tracking-[0.3em] mt-1">Oracle Academy • Issued Oct 2022</p>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-4">
+                    <span class="px-4 py-2 bg-slate-50 rounded-full text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-all">Database Architecture</span>
+                    <div class="w-12 h-12 rounded-full bg-[#0A192F] text-white flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative flex flex-col md:flex-row md:items-center justify-between p-10 bg-[#0A192F] rounded-[3rem] shadow-2xl shadow-blue-900/20 hover:scale-[1.01] transition-all duration-500">
+                <div class="flex items-center gap-8">
+                    <div class="hidden md:flex w-16 h-16 bg-white/10 rounded-2xl items-center justify-center text-white shrink-0">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-white uppercase text-xl tracking-tight">Microsoft Office Specialist (MOS)</h4>
+                        <p class="text-[11px] font-bold text-blue-400 uppercase tracking-[0.3em] mt-1">PTIPD UIN Bandung • Nov 2022</p>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-6">
+                    <p class="hidden lg:block text-[10px] font-bold text-white/40 max-w-[200px] text-right uppercase">Essential Digital Skills for Professional Market</p>
+                    <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative flex flex-col md:flex-row md:items-center justify-between p-10 bg-white border-2 border-slate-50 rounded-[3rem] hover:border-blue-600 transition-all duration-500">
+                <div class="flex items-center gap-8">
+                    <span class="hidden md:block text-slate-100 font-black text-5xl group-hover:text-blue-50 transition-colors">05</span>
+                    <div>
+                        <h4 class="font-black text-[#0A192F] uppercase text-xl tracking-tight">Belajar Dasar Pemrograman JavaScript</h4>
+                        <p class="text-[11px] font-bold text-blue-600 uppercase tracking-[0.3em] mt-1">Dicoding Indonesia • Oct 2022 - 2025</p>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-400 text-[#0A192F] flex items-center justify-center font-black text-xs">JS</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-10 bg-slate-50 rounded-[3rem] border border-slate-100 group hover:bg-white hover:border-blue-600 transition-all">
+                    <p class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-4">Cloud Computing</p>
+                    <h4 class="font-black text-[#0A192F] uppercase text-lg leading-tight mb-2">Dasar Google Cloud (GCP)</h4>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dicoding Indonesia • Issued Jun 2022</p>
+                </div>
+
+                <div class="p-10 bg-slate-50 rounded-[3rem] border border-slate-100 group hover:bg-white hover:border-blue-600 transition-all">
+                    <p class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em] mb-4">Web Fundamental</p>
+                    <h4 class="font-black text-[#0A192F] uppercase text-lg leading-tight mb-2">Dasar Pemrograman Web</h4>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dicoding Indonesia • Issued Jun 2022</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section class="container mx-auto px-6 mb-24">
+            <div class="bg-blue-600 rounded-[4rem] p-16 md:p-24 text-center text-white relative overflow-hidden shadow-[0_40px_80px_-20px_rgba(37,99,235,0.4)] transition-all">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                <h2 class="heading-font text-5xl md:text-7xl uppercase mb-10 relative z-10 leading-none">Let's Create <br> <span class="text-blue-200">Something Real.</span></h2>
+                <div class="flex flex-wrap justify-center gap-5 relative z-10">
+                    <a href="mailto:ivan@example.com" class="bg-[#0A192F] text-white px-12 py-5 rounded-2xl font-black uppercase text-[11px] tracking-[0.2em] hover:bg-white hover:text-[#0A192F] transition-all shadow-xl">Work with Me</a>
+                    <a href="#" class="bg-blue-700 text-white border border-blue-400/50 px-12 py-5 rounded-2xl font-black uppercase text-[11px] tracking-[0.2em] hover:bg-blue-800 transition-all">Direct Chat</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-50 text-center bg-white">
+        <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.5em]">© 2024 IVAN WIJAYANA • NO REASONS ONLY RESULTS</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
