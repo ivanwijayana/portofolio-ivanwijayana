@@ -1,482 +1,1376 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ivan Wijayana | IT & Content Specialist</title>
-    <link rel="icon" type="image/png" href="favicon-iw.png">
+    <link rel="icon" type="image/png" href="favicon-iw.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .blob { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-        .glass { background: rgba(10, 25, 47, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        #mobile-menu { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .hidden-menu { transform: translateY(-100%); opacity: 0; pointer-events: none; }
-        html { scroll-padding-top: 80px; }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .blob {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
+      .glass {
+        background: rgba(10, 25, 47, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        body {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          background-color: #ffffff;
+          overflow-x: hidden;
+        }
+
+        .hero-title {
+          font-family: "Inter", sans-serif;
+          line-height: 0.85;
+          letter-spacing: -0.05em;
+        }
+
+        .text-outline {
+          color: transparent;
+          -webkit-text-stroke: 1px #0a192f;
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+          background: #f8fafc;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+          background: #2563eb;
+          border-radius: 10px;
+        }
+
+        .timeline-line::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 12px;
+          bottom: 0;
+          width: 2px;
+          background: linear-gradient(to bottom, #2563eb, #e2e8f0 95%);
+        }
+
+        @media (min-width: 1024px) {
+          .h-desktop {
+            height: 100vh;
+            overflow: hidden;
+          }
+        }
+
+        #hamburger span {
+          transition: all 0.3s ease;
+          transform-origin: center;
+        }
+      }
     </style>
-</head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+  </head>
+  <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+    <header
+      class="fixed w-full top-0 z-[100] bg-white/80 backdrop-blur-md border-b border-slate-50 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="/"
+          class="text-2xl font-black tracking-tighter uppercase text-[#0A192F]"
+        >
+          IVAN<span class="text-blue-600">.W</span>
+        </a>
 
-    <nav class="fixed w-full z-50 glass py-4 transition-all duration-300">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-white">IW<span class="text-blue-500">.</span></div>
-            <ul class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-300">
-                <li><a href="/about.html" class="hover:text-blue-400 transition-colors">About</a></li>
-                <li><a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a></li>
-                <li><a href="#projects" class="hover:text-blue-400 transition-colors">Selected Work</a></li>
-                <li><a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">Let's Talk</a></li>
-            </ul>
-            <button id="menu-btn" class="md:hidden text-white cursor-pointer p-2">
-                <i data-lucide="menu" id="menu-icon"></i>
-            </button>
-        </div>
-    </nav>
+        <nav
+          class="hidden md:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-[#0A192F]"
+        >
+          <a
+            href="/"
+            class="text-blue-600 leading-none relative after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-blue-600"
+          >
+            Home
+          </a>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#0A192F] flex flex-col items-center justify-center space-y-8 text-xl uppercase tracking-widest hidden-menu md:hidden">
-        <button id="close-btn" class="absolute top-6 right-6 text-white p-2">
-            <i data-lucide="x" class="w-8 h-8"></i>
+          <a
+            href="/myproject.html"
+            class="hover:text-blue-600 leading-none transition-all duration-300"
+          >
+            Projects
+          </a>
+
+          <a
+            href="/mycareer.html"
+            class="hover:text-blue-600 leading-none transition-all duration-300"
+          >
+            Career
+          </a>
+
+          <a
+            href="/about.html"
+            class="hover:text-blue-600 leading-none transition-all duration-300"
+          >
+            About
+          </a>
+
+          <a
+            href="#contact"
+            class="bg-[#0A192F] text-white px-6 py-3 rounded-xl hover:bg-blue-600 transition-all shadow-lg shadow-blue-900/10 ml-2 flex items-center justify-center leading-none"
+          >
+            Let's Talk
+          </a>
+        </nav>
+
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 p-2 relative z-[110] outline-none"
+        >
+          <span
+            class="w-6 h-0.5 bg-[#0A192F] transition-all duration-300 line-1"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-[#0A192F] transition-all duration-300 line-2"
+          ></span>
+          <span
+            class="w-4 h-0.5 bg-[#0A192F] self-end transition-all duration-300 line-3"
+          ></span>
         </button>
-        <a href="#about" class="mobile-link text-slate-300 hover:text-blue-400">Tentang</a>
-        <a href="#experience" class="mobile-link text-slate-300 hover:text-blue-400">Pengalaman</a>
-        <a href="#projects" class="mobile-link text-slate-300 hover:text-blue-400">Project</a>
-        <a href="#contact" class="mobile-link text-blue-500 font-bold border-b-2 border-blue-500 pb-2">Kontak</a>
-    </div>
+      </div>
 
-    <header id="about" class="min-h-screen flex items-center bg-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 translate-x-20 -z-0 hidden md:block"></div>
-        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-16 py-24 relative z-10">
-            <div class="flex-1 text-center md:text-left">
-                <div class="inline-block px-4 py-2 bg-blue-50 rounded-full mb-6">
-                    <p class="text-blue-600 font-extrabold tracking-[0.2em] uppercase text-[10px]">Ready to Innovate & Create</p>
-                </div>
-                <h1 class="text-5xl md:text-8xl font-black text-[#0A192F] mb-6 leading-[0.9] tracking-tighter">
-                    Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Digital</span> Experience.
-                </h1>
-                <p class="text-lg text-slate-600 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-medium">
-                    Halo, saya <span class="text-blue-600 font-bold">Ivan Wijayana</span>. Seorang IT Specialist yang nggak cuma main koding, tapi juga jago ngeracik konten digital yang punya <span class="italic">impact</span>.
-                </p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#contact" class="bg-[#0A192F] hover:bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold transition-all shadow-xl hover:-translate-y-1">Hire Me</a>
-                    <a href="#" class="group border-2 border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600 px-10 py-4 rounded-2xl font-bold transition-all flex items-center gap-2">
-                        Download CV <i data-lucide="download" class="w-4 h-4 group-hover:animate-bounce"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 flex justify-center">
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-blue-600 blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                    <div class="blob w-72 h-72 md:w-[450px] md:h-[450px] bg-slate-100 border-8 border-white overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] transition-all duration-700 group-hover:rotate-3 relative z-10">
-                        <img src="ivan.JPG" alt="Foto Ivan Wijayana" class="w-full h-full object-cover">      
-                    </div>
-                </div>
-            </div>
+      <div
+        id="mobile-nav"
+        class="fixed top-[80px] left-4 right-4 bg-white/95 backdrop-blur-xl shadow-2xl border border-slate-100 rounded-3xl z-[90] flex flex-col items-center justify-center gap-6 p-8 opacity-0 pointer-events-none -translate-y-5 transition-all duration-300 md:hidden"
+      >
+        <nav
+          class="flex flex-col gap-6 text-center text-sm font-black uppercase tracking-[0.25em] text-[#0A192F]"
+        >
+          <a href="/" class="mobile-link text-blue-600">Home</a>
+          <a href="/myproject.html" class="mobile-link hover:text-blue-600"
+            >Projects</a
+          >
+          <a href="/mycareer.html" class="mobile-link hover:text-blue-600"
+            >Career</a
+          >
+          <a href="/about.html" class="mobile-link hover:text-blue-600"
+            >About</a
+          >
+          <hr class="w-10 border-slate-200" />
+          <a href="#contact" class="mobile-link text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <br /><br />
+
+    <header
+      id="about"
+      class="min-h-screen flex items-center bg-white relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 translate-x-20 -z-0 hidden md:block"
+      ></div>
+
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 lg:gap-16 py-16 md:py-24 relative z-10"
+      >
+        <div class="flex-1 text-center md:text-left order-2 md:order-1">
+          <h1
+            class="text-4xl sm:text-5xl md:text-8xl font-black text-[#0A192F] mb-6 leading-[0.9] tracking-tighter"
+          >
+            Crafting
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500"
+              >Digital</span
+            >
+            Experience.
+          </h1>
+          <p
+            class="text-base md:text-lg text-slate-600 mb-8 md:mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed font-medium"
+          >
+            Halo, saya
+            <span class="text-blue-600 font-bold">Ivan Wijayana</span>. Seorang
+            IT Specialist yang nggak cuma main koding, tapi juga jago ngeracik
+            konten <span class="italic">digital</span>.
+          </p>
+
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <a
+              href="#contact"
+              class="bg-[#0A192F] hover:bg-blue-600 text-white px-8 md:px-10 py-3 md:py-4 rounded-2xl font-bold transition-all shadow-xl hover:-translate-y-1 text-sm md:text-base"
+            >
+              Hire Me
+            </a>
+            <a
+              href="#"
+              class="group border-2 border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600 px-8 md:px-10 py-3 md:py-4 rounded-2xl font-bold transition-all flex items-center gap-2 text-sm md:text-base"
+            >
+              CV
+              <i
+                data-lucide="download"
+                class="w-4 h-4 group-hover:animate-bounce"
+              ></i>
+            </a>
+          </div>
         </div>
+
+        <div class="flex-1 flex justify-center items-center order-1 md:order-2">
+          <div
+            class="relative group scale-[0.6] xs:scale-[0.7] md:scale-100 transition-all duration-500 ease-out"
+            style="perspective: 1000px"
+          >
+            <div
+              class="absolute inset-0 bg-blue-600 blur-[80px] md:blur-[110px] opacity-20 group-hover:opacity-60 transition-all duration-500 group-hover:scale-110"
+            ></div>
+
+            <div
+              class="absolute -inset-12 md:-inset-20 border border-blue-500/30 rounded-full animate-[spin_15s_linear_infinite] pointer-events-none transition-all duration-500 group-hover:border-blue-400"
+            >
+              <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-2xl border border-blue-500/10 pointer-events-auto"
+              >
+                <i
+                  data-lucide="code-2"
+                  class="w-5 h-5 text-blue-600 animate-[pulse_2s_infinite]"
+                ></i>
+              </div>
+              <div
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-2xl border border-blue-500/10 pointer-events-auto"
+              >
+                <i
+                  data-lucide="database"
+                  class="w-5 h-5 text-blue-500 animate-[pulse_2.5s_infinite]"
+                ></i>
+              </div>
+              <div
+                class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-2xl border border-blue-500/10 pointer-events-auto"
+              >
+                <i
+                  data-lucide="layout"
+                  class="w-5 h-5 text-indigo-500 animate-[pulse_3s_infinite]"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="absolute -inset-6 md:-inset-10 border border-indigo-500/20 rounded-full animate-[spin_10s_linear_infinite_reverse] pointer-events-none transition-all duration-500 group-hover:border-indigo-400"
+            >
+              <div
+                class="absolute bottom-0 right-1/4 translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-2xl border border-indigo-500/10 pointer-events-auto"
+              >
+                <i
+                  data-lucide="braces"
+                  class="w-5 h-5 text-indigo-600 animate-[pulse_2s_infinite_700ms]"
+                ></i>
+              </div>
+              <div
+                class="absolute top-0 left-1/4 -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-2xl border border-indigo-500/10 pointer-events-auto"
+              >
+                <i
+                  data-lucide="terminal"
+                  class="w-5 h-5 text-blue-700 animate-[pulse_2.2s_infinite_300ms]"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="relative z-10 w-64 h-64 md:w-[420px] md:h-[420px] bg-white rounded-full border-[10px] md:border-[14px] border-white shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] group-hover:shadow-blue-500/20 transition-all duration-500 group-hover:rotate-0 -rotate-3 group-hover:scale-105 overflow-hidden"
+            >
+              <img
+                src="ivan.JPG"
+                alt="Foto Ivan Wijayana"
+                class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-blue-900/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <section id="experience" class="py-24 bg-white overflow-hidden">
-    <div class="container mx-auto px-6">
+      <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
-                <div class="relative">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-[0.5em] block mb-2">History</span>
-                    <h2 class="text-5xl md:text-6xl font-black text-[#0A192F] uppercase tracking-tighter leading-none">
-                        Career <br class="md:hidden"> <span class="text-blue-600">Journey</span>
-                    </h2>
-                </div>
-                <a href="/mycareer.html" class="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0A192F] hover:text-blue-600 transition-all duration-300 border-b-2 border-slate-100 hover:border-blue-600 pb-2">
-                    Explore Full Journey
-                    <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover:rotate-45"></i>
-                </a>
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6"
+          >
+            <div class="relative">
+              <span
+                class="text-blue-600 font-black text-xs uppercase tracking-[0.5em] block mb-2"
+                >History</span
+              >
+              <h2
+                class="text-5xl md:text-6xl font-black text-[#0A192F] uppercase tracking-tighter leading-none"
+              >
+                Career <br class="md:hidden" />
+                <span class="text-blue-600">Journey</span>
+              </h2>
             </div>
-            
-            <div class="relative space-y-0 before:absolute before:inset-y-0 before:left-0 before:w-[1px] before:bg-slate-100">
-                
-                <div class="relative pl-12 pb-16 group">
-                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-blue-600 rounded-full ring-4 ring-blue-50 z-10 transition-transform duration-500 group-hover:scale-150"></div>
-                    
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-black text-[#0A192F] uppercase tracking-tight mb-1 group-hover:text-blue-600 transition-colors">Production Staff</h3>
-                            <p class="text-blue-600 font-bold italic text-xs mb-4">Penerbit Manggu · Paruh Waktu</p>
-                            <p class="text-slate-500 text-sm leading-relaxed max-w-2xl">Bertanggung jawab atas alur teknis produksi mulai dari Packaging, Printing, hingga Quality Control untuk memastikan setiap produk cetak memenuhi standar kualitas tinggi sebelum distribusi.</p>
-                        </div>
-                        <div class="md:text-right pt-1">
-                            <span class="text-[10px] font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">Nov 2023 - Present</span>
-                        </div>
-                    </div>
-                </div>
+            <a
+              href="/mycareer.html"
+              class="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0A192F] hover:text-blue-600 transition-all duration-300 border-b-2 border-slate-100 hover:border-blue-600 pb-2"
+            >
+              Explore Full Journey
+              <i
+                data-lucide="arrow-up-right"
+                class="w-4 h-4 transition-transform group-hover:rotate-45"
+              ></i>
+            </a>
+          </div>
 
-                <div class="relative pl-12 pb-16 group">
-                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"></div>
-                    
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors">Live Stream Host</h3>
-                            <p class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors">CV QION'S PUTRA PERKASA · Kontrak</p>
-                            <p class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors">Mengelola interaksi audiens secara real-time melalui platform live streaming, menerapkan strategi sales yang persuasif untuk meningkatkan volume penjualan produk secara harian.</p>
-                        </div>
-                        <div class="md:text-right pt-1">
-                            <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500">Jul 2024 - Agu 2024</span>
-                        </div>
-                    </div>
-                </div>
+          <div
+            class="relative space-y-0 before:absolute before:inset-y-0 before:left-0 before:w-[1px] before:bg-slate-100"
+          >
+            <div class="relative pl-12 pb-16 group">
+              <div
+                class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-blue-600 rounded-full ring-4 ring-blue-50 z-10 transition-transform duration-500 group-hover:scale-150"
+              ></div>
 
-                <div class="relative pl-12 pb-16 group">
-                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"></div>
-                    
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors">Full Stack Developer</h3>
-                            <p class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors">CV Jauzza Noor · Magang</p>
-                            <p class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors">Berkontribusi dalam pengembangan aplikasi web end-to-end, fokus pada perancangan logika backend, integrasi database, dan pembuatan antarmuka user yang fungsional (Remote).</p>
-                        </div>
-                        <div class="md:text-right pt-1">
-                            <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500">Des 2023 - Apr 2024</span>
-                        </div>
-                    </div>
+              <div
+                class="flex flex-col md:flex-row md:justify-between md:items-start gap-4"
+              >
+                <div class="flex-1">
+                  <h3
+                    class="text-2xl font-black text-[#0A192F] uppercase tracking-tight mb-1 group-hover:text-blue-600 transition-colors"
+                  >
+                    Production Staff
+                  </h3>
+                  <p class="text-blue-600 font-bold italic text-xs mb-4">
+                    Penerbit Manggu · Paruh Waktu
+                  </p>
+                  <p class="text-slate-500 text-sm leading-relaxed max-w-2xl">
+                    Bertanggung jawab atas alur teknis produksi mulai dari
+                    Packaging dan Printing, hingga Quality Control untuk
+                    memastikan setiap produk cetak memenuhi standar kualitas
+                    tinggi sebelum distribusi.
+                  </p>
                 </div>
-
-                <div class="relative pl-12 group">
-                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"></div>
-                    
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors">Staff Outlet</h3>
-                            <p class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors">Surian Komunika · Full-time</p>
-                            <p class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors">Mengelola operasional harian outlet, melakukan auditing stok secara berkala, dan memberikan layanan penjualan prima untuk menjaga tingkat kepuasan pelanggan.</p>
-                        </div>
-                        <div class="md:text-right pt-1">
-                            <span class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500">Agu 2020 - Feb 2022</span>
-                        </div>
-                    </div>
+                <div class="md:text-right pt-1">
+                  <span
+                    class="text-[10px] font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest animate-pulse"
+                    >Nov 2023 - Present</span
+                  >
                 </div>
-
+              </div>
             </div>
+
+            <div class="relative pl-12 pb-16 group">
+              <div
+                class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"
+              ></div>
+
+              <div
+                class="flex flex-col md:flex-row md:justify-between md:items-start gap-4"
+              >
+                <div class="flex-1">
+                  <h3
+                    class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors"
+                  >
+                    Live Stream Host
+                  </h3>
+                  <p
+                    class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors"
+                  >
+                    CV QION'S PUTRA PERKASA · Kontrak
+                  </p>
+                  <p
+                    class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors"
+                  >
+                    Mengelola interaksi audiens secara real-time melalui
+                    platform live streaming, menerapkan strategi sales yang
+                    persuasif untuk meningkatkan volume penjualan produk secara
+                    harian.
+                  </p>
+                </div>
+                <div class="md:text-right pt-1">
+                  <span
+                    class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500"
+                    >Jul 2024 - Agu 2024</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative pl-12 pb-16 group">
+              <div
+                class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"
+              ></div>
+
+              <div
+                class="flex flex-col md:flex-row md:justify-between md:items-start gap-4"
+              >
+                <div class="flex-1">
+                  <h3
+                    class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors"
+                  >
+                    Full Stack Developer
+                  </h3>
+                  <p
+                    class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors"
+                  >
+                    CV Jauzza Noor · Magang
+                  </p>
+                  <p
+                    class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors"
+                  >
+                    Merancang dan membangun arsitektur website Full-Stack yang
+                    skalabel, mengoptimalkan efisiensi struktur kode, serta
+                    mengelola integrasi database untuk performa sistem yang
+                    responsif.
+                  </p>
+                </div>
+                <div class="md:text-right pt-1">
+                  <span
+                    class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500"
+                    >Des 2023 - Apr 2024</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative pl-12 group">
+              <div
+                class="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-slate-200 group-hover:bg-blue-400 rounded-full z-10 transition-all duration-500"
+              ></div>
+
+              <div
+                class="flex flex-col md:flex-row md:justify-between md:items-start gap-4"
+              >
+                <div class="flex-1">
+                  <h3
+                    class="text-2xl font-black text-slate-400 group-hover:text-[#0A192F] uppercase tracking-tight mb-1 transition-colors"
+                  >
+                    Staff Outlet
+                  </h3>
+                  <p
+                    class="text-slate-400 font-bold italic text-xs mb-4 group-hover:text-blue-600 transition-colors"
+                  >
+                    Surian Komunika · Full-time
+                  </p>
+                  <p
+                    class="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed max-w-2xl transition-colors"
+                  >
+                    Mengelola operasional harian outlet, melakukan auditing stok
+                    secara berkala, dan memberikan layanan penjualan prima untuk
+                    menjaga tingkat kepuasan pelanggan.
+                  </p>
+                </div>
+                <div class="md:text-right pt-1">
+                  <span
+                    class="text-[10px] font-black text-slate-300 uppercase tracking-widest group-hover:text-slate-500"
+                    >Agu 2020 - Feb 2022</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <section id="projects" class="py-24 bg-white">
-    <div class="container mx-auto px-6">
+      <div class="container mx-auto px-6">
         <div class="mb-20">
-            <h2 class="text-4xl md:text-6xl font-black text-[#0A192F] uppercase tracking-tighter">Selected <span class="text-blue-600 italic text-stroke-dark">Work</span></h2>
-            <p class="text-slate-500 mt-4 font-medium text-lg italic tracking-tight">"Where code meets creativity & AI meets storytelling."</p>
+          <h2
+            class="text-4xl md:text-6xl font-black text-[#0A192F] uppercase tracking-tighter"
+          >
+            Selected
+            <span class="text-blue-600 italic text-stroke-dark">Work</span>
+          </h2>
+          <p
+            class="text-slate-500 mt-4 font-medium text-lg italic tracking-tight"
+          >
+            "Where code meets creativity & AI meets storytelling."
+          </p>
         </div>
 
         <div class="mb-32">
-            <div class="flex items-center gap-4 mb-12">
-                <span class="h-px w-12 bg-blue-600"></span>
-                <h3 class="text-xl font-black text-[#0A192F] uppercase tracking-widest">Development</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-[#0A192F] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-                        <span class="text-blue-500 font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading">CALC<span class="text-white">.CO</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-blue-100 text-blue-600 px-3 py-1 rounded-full uppercase">TailwindCSS</span>
-                            <span class="text-[9px] font-black bg-blue-100 text-blue-600 px-3 py-1 rounded-full uppercase">JS</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Manifesting Young & Wild</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">Platform kalkulator multiguna untuk manajemen split-bill dan pelacakan usia detail.</p>
-                        <a href="https://calc-co.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-blue-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            View Project <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
+          <div class="flex items-center gap-4 mb-12">
+            <span class="h-px w-12 bg-blue-600"></span>
+            <h3
+              class="text-xl font-black text-[#0A192F] uppercase tracking-widest"
+            >
+              Development
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full"
+            >
+              <div
+                class="h-56 bg-[#1A1A1A] flex flex-col items-center justify-center relative overflow-hidden p-6 text-center"
+              >
+                <div
+                  class="absolute inset-0 opacity-10 font-mono text-[7px] text-orange-400 p-4 leading-tight select-none"
+                >
+                  from sklearn.ensemble import RandomForestClassifier<br />
+                  import numpy as np<br />
+                  # Model Optimization for Recitation Data...<br />
+                  model = RandomForestClassifier(criterion='entropy',
+                  random_state=42)<br />
+                  print("Accuracy Score:", accuracy)
                 </div>
 
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-[#3A5A40] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading flex items-center gap-2">
-                            FLORA<span class="text-[#A3B18A]">.SYNC</span>
-                        </span>
-                    </div>
+                <div
+                  class="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500"
+                >
+                  <i
+                    data-lucide="brain-circuit"
+                    class="text-orange-500 w-10 h-10"
+                  ></i>
+                </div>
+                <span
+                  class="text-white font-black text-xs tracking-[0.4em] font-heading leading-tight uppercase opacity-60"
+                >
+                  Research <span class="text-orange-500">Implementation</span>
+                </span>
+              </div>
 
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase">Alpine JS</span>
-                            <span class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase">Tailwind</span>
-                            <span class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase">Nature Tech</span>
-                        </div>
-                        
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Digital Oasis Assistant</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
-                            Sistem monitoring perawatan tanaman hias dengan fitur pelacakan hidrasi dan penjadwalan otomatis yang estetik.
-                        </p>
-
-                        <a href="https://florasync.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-[#3A5A40] uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            View Project 
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </a>
-                    </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-orange-50 text-orange-600 px-3 py-1 rounded-full uppercase"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-slate-100 text-slate-600 px-3 py-1 rounded-full uppercase"
+                    >Random Forest</span
+                  >
                 </div>
 
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-indigo-600 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/pixel-weave.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading italic uppercase">Retro<span class="text-indigo-300">.Game</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full uppercase">JS</span>
-                            <span class="text-[9px] font-black bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full uppercase">Retro</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">The 8-Bit Nostalgia</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">Platform game arcade klasik berbasis web dengan mekanik retro murni.</p>
-                        <a href="http://retro-game-arcade.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-indigo-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            Launch Arcade <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
-                </div>
+                <h4
+                  class="text-lg font-black text-[#0A192F] mb-3 leading-tight group-hover:text-orange-600 transition-colors"
+                >
+                  Optimizing Qur'an Recitation Monitoring
+                </h4>
 
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-cyan-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/bubbles.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic">CLEAN<span class="text-cyan-100">.LY</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-cyan-100 text-cyan-600 px-3 py-1 rounded-full uppercase">React</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Laundry Flow System</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">Solusi manajemen cucian modern untuk monitoring status pakaian harian.</p>
-                        <a href="http://react-laundry-flame.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-cyan-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            Open App <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
-                </div>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Environment project python untuk pengolahan data survei dan
+                  pelatihan model Random Forest. Mencakup proses data cleaning
+                  hingga evaluasi model untuk optimasi sistem pemantauan tadarus
+                  Al-Qur'an.
+                </p>
 
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-emerald-600 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/money.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic font-heading">CATAT<span class="text-emerald-200">.UANG</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full uppercase">Fintech</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Financial Tracker Pro</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">Monitor pengeluaran dan pemasukan harian dengan grafik analisis cerdas.</p>
-                        <a href="http://catatuang-two.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-emerald-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            Manage Money <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-[#FF6B35] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/topography.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic font-heading uppercase">Summit<span class="text-orange-900/30">Seeker</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-orange-100 text-[#FF6B35] px-3 py-1 rounded-full uppercase">Outdoor</span>
-                            <span class="text-[9px] font-black bg-orange-100 text-[#FF6B35] px-3 py-1 rounded-full uppercase">Rental</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Elite Gear Rental Hub</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">Sistem penyewaan alat pendakian gunung dengan manajemen inventaris basecamp.</p>
-                        <a href="http://summit-seeker-five.vercel.app/" target="_blank" class="flex items-center justify-between font-black text-[10px] text-[#FF6B35] uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            Go Explore <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flex justify-center mt-16">
-                <a href="/myproject.html" class="group flex flex-col items-center gap-2">
-                    <span class="text-blue-600 font-black text-[10px] uppercase tracking-[0.3em] transition-all group-hover:tracking-[0.5em]">See All Development</span>
-                    <span class="h-1.5 w-12 bg-blue-600 rounded-full transition-all group-hover:w-24"></span>
+                <a
+                  href="https://colab.research.google.com/drive/1S7jR96CORUzw10DXC565cYNSxpof9z2U"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-orange-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  Launch Google Colab
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    ></path>
+                  </svg>
                 </a>
+              </div>
             </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-[#0A192F] flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
+                ></div>
+                <span
+                  class="text-blue-500 font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading"
+                  >CALC<span class="text-white">.CO</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-blue-100 text-blue-600 px-3 py-1 rounded-full uppercase"
+                    >TailwindCSS</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-blue-100 text-blue-600 px-3 py-1 rounded-full uppercase"
+                    >JS</span
+                  >
+                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Manifesting Young & Wild
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Platform kalkulator multiguna untuk manajemen split-bill dan
+                  pelacakan usia detail.
+                </p>
+                <a
+                  href="https://calc-co.vercel.app/"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-blue-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  View Project
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-[#3A5A40] flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/leaves.png')]"
+                ></div>
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading flex items-center gap-2"
+                >
+                  FLORA<span class="text-[#A3B18A]">.SYNC</span>
+                </span>
+              </div>
+
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase"
+                    >Alpine JS</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase"
+                    >Tailwind</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-[#E2E8DD] text-[#3A5A40] px-3 py-1 rounded-full uppercase"
+                    >Nature Tech</span
+                  >
+                </div>
+
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Digital Oasis Assistant
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Sistem monitoring perawatan tanaman hias dengan fitur
+                  pelacakan hidrasi dan penjadwalan otomatis yang estetik.
+                </p>
+
+                <a
+                  href="https://florasync.vercel.app/"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-[#3A5A40] uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  View Project
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-cyan-500 flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/bubbles.png')]"
+                ></div>
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic"
+                  >CLEAN<span class="text-cyan-100">.LY</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-cyan-100 text-cyan-600 px-3 py-1 rounded-full uppercase"
+                    >React</span
+                  >
+                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Laundry Flow System
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Solusi manajemen cucian modern untuk monitoring status pakaian
+                  harian.
+                </p>
+                <a
+                  href="http://react-laundry-flame.vercel.app/"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-cyan-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  Open App
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-emerald-600 flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/money.png')]"
+                ></div>
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic font-heading"
+                  >CATAT<span class="text-emerald-200">.UANG</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full uppercase"
+                    >Fintech</span
+                  >
+                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Financial Tracker Pro
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Monitor pengeluaran dan pemasukan harian dengan grafik
+                  analisis cerdas.
+                </p>
+                <a
+                  href="http://catatuang-two.vercel.app/"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-emerald-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  Manage Money
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-[#FF6B35] flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/topography.png')]"
+                ></div>
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 italic font-heading uppercase"
+                  >Summit<span class="text-orange-900/30">Seeker</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-orange-100 text-[#FF6B35] px-3 py-1 rounded-full uppercase"
+                    >Outdoor</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-orange-100 text-[#FF6B35] px-3 py-1 rounded-full uppercase"
+                    >Rental</span
+                  >
+                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Elite Gear Rental Hub
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed">
+                  Sistem penyewaan alat pendakian gunung dengan manajemen
+                  inventaris basecamp.
+                </p>
+                <a
+                  href="http://summit-seeker-five.vercel.app/"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-[#FF6B35] uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  Go Explore
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-16">
+            <a
+              href="/myproject.html"
+              class="group flex flex-col items-center gap-2"
+            >
+              <span
+                class="text-blue-600 font-black text-[10px] uppercase tracking-[0.3em] transition-all group-hover:tracking-[0.5em]"
+                >See All Development</span
+              >
+              <span
+                class="h-1.5 w-12 bg-blue-600 rounded-full transition-all group-hover:w-24"
+              ></span>
+            </a>
+          </div>
         </div>
 
         <div>
-            <div class="flex items-center gap-4 mb-12">
-                <span class="h-px w-12 bg-purple-600"></span>
-                <h3 class="text-xl font-black text-[#0A192F] uppercase tracking-widest">AI Content Creation</h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-purple-600 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/microfab.png')]"></div>
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700">AI<span class="text-purple-200">.GEN</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-purple-100 text-purple-600 px-3 py-1 rounded-full uppercase">Midjourney</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">Visual Storytelling</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1">Pembuatan aset visual sinematik menggunakan prompt engineering tingkat tinggi.</p>
-                        <a href="#" class="flex items-center justify-between font-black text-[10px] text-purple-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            View Showcase <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
+          <div class="flex items-center gap-4 mb-12">
+            <span class="h-px w-12 bg-purple-600"></span>
+            <h3
+              class="text-xl font-black text-[#0A192F] uppercase tracking-widest"
+            >
+              Publication & AI Content Creation
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full"
+            >
+              <div
+                class="h-56 bg-emerald-950 flex flex-col items-center justify-center relative overflow-hidden p-6 text-center"
+              >
+                <div class="absolute inset-0 opacity-10">
+                  <svg
+                    class="w-full h-full"
+                    fill="currentColor"
+                    viewBox="0 0 100 100"
+                  >
+                    <pattern
+                      id="grid"
+                      width="10"
+                      height="10"
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <path
+                        d="M 10 0 L 0 0 0 10"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="0.5"
+                      />
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                  </svg>
                 </div>
 
-                <div class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="h-56 bg-indigo-900 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading">VOID<span class="text-indigo-400">.STUDIO</span></span>
-                    </div>
-                    <div class="p-8 flex flex-col flex-1">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-[9px] font-black bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full uppercase">Automation</span>
-                        </div>
-                        <h4 class="text-xl font-black text-[#0A192F] mb-3 leading-tight">AI Voiceover & Video</h4>
-                        <p class="text-xs text-slate-500 mb-8 flex-1">Produksi konten video pendek otomatis dengan integrasi voiceover dan lip-sync AI.</p>
-                        <a href="#" class="flex items-center justify-between font-black text-[10px] text-indigo-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform">
-                            View Project <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <i
+                  data-lucide="microscope"
+                  class="text-emerald-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-700"
+                ></i>
+                <span
+                  class="text-white font-black text-xl tracking-tighter font-heading leading-tight uppercase px-4"
+                >
+                  Khazanah <span class="text-emerald-400">Journal</span>
+                </span>
+                <p
+                  class="text-[8px] text-emerald-200/50 font-bold uppercase tracking-[0.3em] mt-2"
+                >
+                  Religion & Technology
+                </p>
+              </div>
 
-            <div class="flex justify-center mt-16">
-                <a href="/all-ai-work" class="group flex flex-col items-center gap-2">
-                    <span class="text-purple-600 font-black text-[10px] uppercase tracking-[0.3em] transition-all group-hover:tracking-[0.5em]">See All AI Work</span>
-                    <span class="h-1.5 w-12 bg-purple-600 rounded-full transition-all group-hover:w-24"></span>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full uppercase"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="text-[9px] font-black bg-slate-100 text-slate-600 px-3 py-1 rounded-full uppercase"
+                    >Random Forest</span
+                  >
+                </div>
+
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight group-hover:text-emerald-700 transition-colors"
+                >
+                  Optimizing Qur'an Recitation Monitoring with Random Forest
+                  Algorithm
+                </h4>
+
+                <p
+                  class="text-xs text-slate-500 mb-8 flex-1 leading-relaxed italic"
+                >
+                  Penelitian tentang optimasi pemantauan hafalan Al-Qur'an
+                  menggunakan algoritma Random Forest untuk akurasi data yang
+                  lebih presisi.
+                </p>
+
+                <a
+                  href="https://ejournal.uinsgd.ac.id/index.php/kjrt/article/view/227"
+                  target="_blank"
+                  class="flex items-center justify-between font-black text-[10px] text-emerald-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  Read Publication
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
                 </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="workflow" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="mb-16 text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-black text-[#0A192F] uppercase tracking-tighter">
-                    The <span class="text-blue-600">Process</span>
-                </h2>
-                <div class="flex items-center justify-center md:justify-start gap-3 mt-2">
-                    <span class="h-1 w-10 bg-blue-600"></span>
-                    <p class="text-slate-500 font-medium italic tracking-tight">How I bring ideas to life</p>
-                </div>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group relative">
-                    <span class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0">01</span>
-                    <div class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full">
-                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
-                            <i data-lucide="search" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight">Discovery</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Riset mendalam untuk memahami masalah dan menentukan strategi solusi paling efektif.</p>
-                    </div>
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-purple-600 flex items-center justify-center relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/microfab.png')]"
+                ></div>
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700"
+                  >AI<span class="text-purple-200">.GEN</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-purple-100 text-purple-600 px-3 py-1 rounded-full uppercase"
+                    >Midjourney</span
+                  >
                 </div>
-                <div class="group relative">
-                    <span class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0">02</span>
-                    <div class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full">
-                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
-                            <i data-lucide="layout" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight">Design</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Transformasi konsep menjadi visual intuitif dengan fokus pada User Experience.</p>
-                    </div>
-                </div>
-                <div class="group relative">
-                    <span class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0">03</span>
-                    <div class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full">
-                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
-                            <i data-lucide="code-2" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight">Development</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Coding dengan stack modern untuk sistem yang stabil dan scalable.</p>
-                    </div>
-                </div>
-                <div class="group relative">
-                    <span class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0">04</span>
-                    <div class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full">
-                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
-                            <i data-lucide="rocket" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight">Launch</h3>
-                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Peluncuran produk, pengujian performa akhir, dan pemeliharaan berkala.</p>
-                    </div>
-                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  Visual Storytelling
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1">
+                  Pembuatan aset visual sinematik menggunakan prompt engineering
+                  tingkat tinggi.
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center justify-between font-black text-[10px] text-purple-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  View Showcase
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
+
+            <div
+              class="group flex flex-col bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div
+                class="h-56 bg-indigo-900 flex items-center justify-center relative overflow-hidden"
+              >
+                <span
+                  class="text-white font-black text-4xl tracking-tighter group-hover:scale-110 transition-transform duration-700 font-heading"
+                  >VOID<span class="text-indigo-400">.STUDIO</span></span
+                >
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-[9px] font-black bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full uppercase"
+                    >Automation</span
+                  >
+                </div>
+                <h4
+                  class="text-xl font-black text-[#0A192F] mb-3 leading-tight"
+                >
+                  AI Voiceover & Video
+                </h4>
+                <p class="text-xs text-slate-500 mb-8 flex-1">
+                  Produksi konten video pendek otomatis dengan integrasi
+                  voiceover dan lip-sync AI.
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center justify-between font-black text-[10px] text-indigo-600 uppercase border-t border-slate-200/60 pt-5 group-hover:translate-x-2 transition-transform"
+                >
+                  View Project
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-16">
+            <a
+              href="/all-ai-work"
+              class="group flex flex-col items-center gap-2"
+            >
+              <span
+                class="text-purple-600 font-black text-[10px] uppercase tracking-[0.3em] transition-all group-hover:tracking-[0.5em]"
+                >See All AI Work</span
+              >
+              <span
+                class="h-1.5 w-12 bg-purple-600 rounded-full transition-all group-hover:w-24"
+              ></span>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer id="contact" class="bg-[#0A192F] text-white py-24 relative overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center mb-20">
-                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter italic">Let's <span class="text-blue-500">Collaborate!</span></h2>
-                <p class="text-slate-400 text-xl leading-relaxed font-medium">Tersedia untuk solusi IT yang presisi atau kolaborasi konten yang inspiratif.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-20">
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">WA</span>
-                </a>
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-brands fa-linkedin text-2xl text-blue-400"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">LinkedIn</span>
-                </a>
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-brands fa-github text-2xl text-white"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">GitHub</span>
-                </a>
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-solid fa-envelope text-2xl text-red-400"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email</span>
-                </a>
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-brands fa-instagram text-2xl text-pink-400"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">IG</span>
-                </a>
-                <a href="#" class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
-                    <i class="fa-brands fa-tiktok text-2xl text-slate-200"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">TikTok</span>
-                </a>
-            </div>
-
-            <div class="text-center pt-16 border-t border-white/10">
-                <p class="text-[10px] font-bold tracking-[0.5em] text-slate-500 uppercase">© 2026 IVAN WIJAYANA — BUILT FOR THE FUTURE</p>
-            </div>
+    <section id="workflow" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="mb-16 text-center md:text-left">
+          <h2
+            class="text-4xl md:text-5xl font-black text-[#0A192F] uppercase tracking-tighter"
+          >
+            The <span class="text-blue-600">Process</span>
+          </h2>
+          <div
+            class="flex items-center justify-center md:justify-start gap-3 mt-2"
+          >
+            <span class="h-1 w-10 bg-blue-600"></span>
+            <p class="text-slate-500 font-medium italic tracking-tight">
+              How I bring ideas to life
+            </p>
+          </div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group relative">
+            <span
+              class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0"
+              >01</span
+            >
+            <div
+              class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full"
+            >
+              <div
+                class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform"
+              >
+                <i data-lucide="search" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight"
+              >
+                Discovery
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Riset mendalam untuk memahami masalah dan menentukan strategi
+                solusi paling efektif.
+              </p>
+            </div>
+          </div>
+          <div class="group relative">
+            <span
+              class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0"
+              >02</span
+            >
+            <div
+              class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full"
+            >
+              <div
+                class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform"
+              >
+                <i data-lucide="layout" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight"
+              >
+                Design
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Transformasi konsep menjadi visual intuitif dengan fokus pada
+                User Experience.
+              </p>
+            </div>
+          </div>
+          <div class="group relative">
+            <span
+              class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0"
+              >03</span
+            >
+            <div
+              class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full"
+            >
+              <div
+                class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform"
+              >
+                <i data-lucide="code-2" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight"
+              >
+                Development
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Coding dengan stack modern untuk sistem yang stabil dan
+                scalable.
+              </p>
+            </div>
+          </div>
+          <div class="group relative">
+            <span
+              class="absolute -top-10 -left-4 text-8xl font-black text-slate-200/50 group-hover:text-blue-100 transition-colors duration-500 z-0"
+              >04</span
+            >
+            <div
+              class="relative z-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 h-full"
+            >
+              <div
+                class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform"
+              >
+                <i data-lucide="rocket" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3
+                class="text-xl font-black text-[#0A192F] mb-3 uppercase tracking-tight"
+              >
+                Launch
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed font-medium">
+                Peluncuran produk, pengujian performa akhir, dan pemeliharaan
+                berkala.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      id="contact"
+      class="bg-[#0A192F] text-white py-24 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center mb-20">
+          <h2
+            class="text-5xl md:text-7xl font-black mb-8 tracking-tighter italic"
+          >
+            Let's <span class="text-blue-500">Collaborate!</span>
+          </h2>
+          <p class="text-slate-400 text-xl leading-relaxed font-medium">
+            Tersedia untuk solusi IT yang presisi atau kolaborasi konten yang
+            inspiratif.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-20">
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >WA</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-brands fa-linkedin text-2xl text-blue-400"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >LinkedIn</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-brands fa-github text-2xl text-white"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >GitHub</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-solid fa-envelope text-2xl text-red-400"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >Email</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-brands fa-instagram text-2xl text-pink-400"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >IG</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+          >
+            <i class="fa-brands fa-tiktok text-2xl text-slate-200"></i>
+            <span
+              class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
+              >TikTok</span
+            >
+          </a>
+        </div>
+
+        <div class="text-center pt-16 border-t border-white/10">
+          <p
+            class="text-[10px] font-bold tracking-[0.5em] text-slate-500 uppercase"
+          >
+            © 2026 IVAN WIJAYANA — BUILT FOR THE FUTURE
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        lucide.createIcons();
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+      lucide.createIcons();
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+      const line1 = hamburger.querySelector(".line-1");
+      const line2 = hamburger.querySelector(".line-2");
+      const line3 = hamburger.querySelector(".line-3");
 
-        const toggleMenu = (isOpen) => {
-            mobileMenu.classList.toggle('hidden-menu', !isOpen);
-            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-        };
+      function openMenu() {
+        mobileNav.classList.remove(
+          "opacity-0",
+          "pointer-events-none",
+          "-translate-y-5",
+        );
+        mobileNav.classList.add("opacity-100", "translate-y-0");
 
-        menuBtn.addEventListener('click', () => toggleMenu(true));
-        closeBtn.addEventListener('click', () => toggleMenu(false));
-        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        line1.classList.add("rotate-45", "translate-y-[8px]");
+        line2.classList.add("opacity-0");
+        line3.classList.add("-rotate-45", "-translate-y-[8px]", "w-6");
+        line3.classList.remove("w-4");
+      }
 
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-2', 'shadow-2xl');
-                nav.classList.remove('py-4');
-            } else {
-                nav.classList.add('py-4');
-                nav.classList.remove('py-2', 'shadow-2xl');
-            }
-        });
+      function closeMenu() {
+        mobileNav.classList.add(
+          "opacity-0",
+          "pointer-events-none",
+          "-translate-y-5",
+        );
+        mobileNav.classList.remove("opacity-100", "translate-y-0");
+
+        line1.classList.remove("rotate-45", "translate-y-[8px]");
+        line2.classList.remove("opacity-0");
+        line3.classList.remove("-rotate-45", "-translate-y-[8px]", "w-6");
+        line3.classList.add("w-4");
+      }
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.contains("opacity-100");
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
     </script>
-</body>
+  </body>
 </html>
